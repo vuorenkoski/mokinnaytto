@@ -1,8 +1,21 @@
 // ver. 4.1 (beta)
 // mokin naytto versio johon lisätty myös lampötila-anturi
-// koodia korjattu 24.2.218: 10.0 lampotila, sekä lisätty tekstin naytto
+// koodia korjattu 24.2.2018: 10.0 lampotila, sekä lisätty tekstin naytto
 // teksti: NDTr1234567, jossa r=rivi. odotetaan 11 riviä, sitten tulostus
 // teksti poistuu 2 minuutin jälkeen tai kun painaa nappia
+
+// Hardware
+// naytto: Nokia5110
+// lampotailaanturi: DS18B20
+// liikeanturi: PIR seeedstudio (https://www.seeedstudio.com/PIR-Motion-Sensor-Large-Lens-version-p-1976.html)
+// mikrontrolloeri + läehtin/vastaanotin: Ciseco rfu-328 (atmega328)
+
+// toiminta: 
+// 1) perustoimintana näyttää lämpötiloja jotka saa serverin kautta.
+// 2) mittaa sisalampotilaa, lähettaa datan serverille
+// 3) mittaa liiketta, lähettää datan serverille
+// 4) tulostaa radiolta tulevan datan soitettavista kappaleista
+// 5) voi ohjata muualla olevan lampotilaviisarin datan lähdettä (ulkona, sisällä, järvessä)
 
 // 4.5.2019: koodiin lisätty lampotila funktioon reset jos lämpötila -127, ei kokeiltu tätä koodia
 
